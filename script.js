@@ -99,7 +99,7 @@ leftButton.addEventListener("touchstart", (e) => {
         backgroundColor: "rgb(150,150,150)"
     });
     brightness = Math.max(brightness - 10, 0);
-    fetch("/" + "B" + brightness + "END");
+    fetch("/" + "BRIGHTNESS" + brightness + "END");
     css(brightnessBar, {width: brightness + "%"});
 });
 leftButton.addEventListener("touchend", (e) => {
@@ -111,7 +111,7 @@ rightButton.addEventListener("touchstart", (e) => {
     css(rightButton, {
         backgroundColor: "rgb(150,150,150)"
     });
-    fetch("/" + "B" + brightness + "END");
+    fetch("/" + "BRIGHTNESS" + brightness + "END");
     brightness = Math.min(brightness + 10, 100);
     css(brightnessBar, {width: brightness + "%"});
 });
